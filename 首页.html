@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <style type="text/css">
+        div {
+            display: inline;
+        }
+
+        #navlist ul {
+            list-style-type: none;
+            position: absolute;
+            left: 203px;
+            top: 77px;
+        }
+
+        #navlist li {
+            float: left;
+        }
+
+            #navlist li a {
+                color: black;
+                font-family: 'Times New Roman';
+                text-decoration: none;
+                display: block;
+                padding-top: 4px;
+                width: 97px;
+                height: 28px;
+                text-align: center;
+                background-color: floralwhite;
+                margin-left: 2px;
+            }
+
+                #navlist li a:hover {
+                    background-color: slateblue;
+                    color: antiquewhite;
+                }
+    </style>
+    <style type="text/css">
+        img {
+            display: inline
+        }
+
+        .subject {
+            color: black;
+            font-size: 28px;
+            font-family: STSong;
+            background-color: white;
+            border: 2px dotted #ccc;
+            position: absolute;
+            height: 80px;
+            width: 819px;
+            left: 246px;
+            top: 0;
+        }
+
+        .explore {
+            font-family: STSong;
+            font-size: 20px;
+            border: 2px solid white;
+            height: 800px;
+            width: 900px;
+            position: absolute;
+            left: 246px;
+            right: 25%;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject">
+        &nbsp;
+        <div style="font-size:36px;font-family:'Arial Rounded MT';">WITRobPose</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size: 22px">智能机器人湖北省重点实验室</div><br />&nbsp;
+        <div style="font-size:22px;">工业机器人姿态数据集</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size:22px;">工业机器人工程技术研究中心</div>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="image/校徽.jpg" height="84px" style=" position: absolute;
+            top: 0; background:ActiveBordert;" />
+    <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="navlist">
+        <ul style="position:center;">
+            <li><a href="首页.html">首页</a></li>
+            <li><a href="下载.html">下载</a></li>
+            <li><a href="详细介绍.html">详细介绍</a></li>
+            <li><a href="关于我们.html">关于我们</a></li>
+            <li><a href="home.html">English</a></li>
+        </ul>
+    </div><br /><br /><br /><br />&nbsp;
+    <div class="explore">
+        <div style="font-family:Bahnschrift">数据集介绍：</div>
+        <div>
+            <br />
+            ①标注方法：<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我们将预处理之后的图片放在img文件夹下，然后用打点代码进行逐张标注，在运行后的图片上打点。由于我们的数据集都是六轴工业机器人，所以，在每个关节点进行标注（即，六个关节点），再运行连线代码进行连线，得到最终标注好的图片。若存在线在机器人外面的情况，则将点的位置进行调整，直到能展示机器人的姿态。<br />
+            ②使用方法：<br /><br />
+            1.如果有视频数据，则将photo和video（通过video_cut.py，视频文件放在同目录下，文件名改为Test.mp4，如果后缀不同的改代码里面的后缀)处理，选择合适的帧参数对视频进行截取，对于差样本剔除等需手动选择合适样本存入image。<br /><br />
+            2.images文件夹图片排好序，然后将一段视频的生成的image文件夹，通过resize.py缩小存入img文件夹,如果继续需要添加视频，用resize_img.py,需要设置里面参数img_new_name就可以继续在后面添加图片了，否则用上面那个脚本会覆盖之前的图片。<br /><br />
+            3.如果直接收集的图片数据，则直接将图片放到img文件夹里，然后进行以下操作。<br /><br />
+            4.对img文件夹通过mouse_callback.py 打点，draw_line.py连线存入ann文件夹。<br /><br />
+            5.通过txt2json.py转为json文件，通过check.py进行json格式化检测，如果报错，通过bejson官网的在线json文件格式检查找错并改正，一般是逗号少了一处又多了一处多问题。<br /><br />
+            备注：如果脚本有绝对路径的改为相对路径这样路径就不会报错了。<br /><br /><br /><br />
+            <div style="font-family:STSong;font-size:30px;text-align:center;color:red;display:block;">如果你需要该数据集，请下载吧！</div>
+        </div>
+    </div>
+
+    <body style="background-image: url(image/纯色1.jpg); background-repeat:no-repeat  ">
+    </body>
+</body>
+</html>
