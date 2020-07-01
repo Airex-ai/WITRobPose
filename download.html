@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript"></script>
+    <meta charset="utf-8" />
+    <title>首页</title>
+    <style type="text/css">
+        div {
+            display: inline;
+        }
+
+        #navlist ul {
+            list-style-type: none;
+            position: absolute;
+            left: 203px;
+            top: 77px;
+        }
+
+        #navlist li {
+            float: left;
+        }
+
+            #navlist li a {
+                color: black;
+                font-family: 'Times New Roman';
+                text-decoration: none;
+                display: block;
+                padding-top: 4px;
+                width: 97px;
+                height: 28px;
+                text-align: center;
+                background-color: floralwhite;
+                margin-left: 2px;
+            }
+
+                #navlist li a:hover {
+                    background-color: slateblue;
+                    color: antiquewhite;
+                }
+    </style>
+    <style type="text/css">
+        img {
+            display: inline
+        }
+
+        .subject {
+            color: black;
+            font-size: 28px;
+            font-family: 'Times New Roman';
+            background-color: white;
+            border: 2px dotted #ccc;
+            position: absolute;
+            height: 80px;
+            width: 819px;
+            left: 18%;
+            top: 0;
+        }
+
+        .explore {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            border: 2px solid white;
+            height: 480px;
+            width: 900px;
+            position: absolute;
+            left: 18%;
+            right: 25%;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject">
+        &nbsp;&nbsp;&nbsp;
+        <div style="font-size:36px;font-family:'Arial Rounded MT';">WITRobPose</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size: 22px">Hubei Provincial Key Laboratory of Intelligent Robot</div><br />
+        <div style="font-size:22px;">Industrial robot attitude data set</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size:20px;">Research Center of Industrial Robot Engineering Technology</div>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="image/校徽.jpg" height="84px" style=" position: absolute;
+            top: 0; background:ActiveBordert;" />
+    <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="navlist">
+        <ul style="position:center;">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="detailed description.html">details</a></li>
+            <li><a href="About us.html">About us</a></li>
+            <li><a href="下载.html">中文</a></li>
+        </ul>
+    </div><br /><br /><br /><br />&nbsp;
+    <script>document.write("Number of downloads：")</script>
+    <div class="explore">
+        <a href="数据集/压缩包.zip" onclick="func()">Data set download</a>
+        <script type="text/javascript">
+            window.onload = function () {
+                sessionStorage.setItem("count", 0);
+            }
+            let data = sessionStorage.getItem("count");
+            function func() {
+                data = data + 1;
+                sessionStorage.setItem("count", data);
+
+                let showArea = document.getElementById("showCount");
+                showArea.innerHTML = sessionStorage.getItem("count");
+
+            }
+            window.onunload = function () {
+                sessionStorage.clear();
+            }
+
+        </script>
+    </div>
+    <body style="background-image: url(image/纯色1.jpg); background-repeat:no-repeat  ">
+        <div id="showCount"></div>
+
+    </body>
+</html>
