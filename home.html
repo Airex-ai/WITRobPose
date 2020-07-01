@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Home</title>
+    <style type="text/css">
+        div {
+            display: inline;
+        }
+
+        #navlist ul {
+            list-style-type: none;
+            position: absolute;
+            left: 203px;
+            top: 77px;
+        }
+
+        #navlist li {
+            float: left;
+        }
+
+            #navlist li a {
+                color: black;
+                font-family: 'Times New Roman';
+                text-decoration: none;
+                display: block;
+                padding-top: 4px;
+                width: 97px;
+                height: 28px;
+                text-align: center;
+                background-color: floralwhite;
+                margin-left: 2px;
+            }
+
+                #navlist li a:hover {
+                    background-color: slateblue;
+                    color: antiquewhite;
+                }
+    </style>
+    <style type="text/css">
+        img {
+            display: inline
+        }
+
+        .subject {
+            color: black;
+            font-size: 28px;
+            font-family: 'Times New Roman';
+            background-color: white;
+            border: 2px dotted #ccc;
+            position: absolute;
+            height: 80px;
+            width: 819px;
+            left: 246px;
+            top: 0;
+        }
+
+        .explore {
+            font-family: 'Times New Roman';
+            font-size: 20px;
+            border: 2px solid white;
+            height: 800px;
+            width: 900px;
+            position: absolute;
+            left: 246px;
+            right: 25%;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="subject">
+        &nbsp;&nbsp;&nbsp;
+        <div style="font-size:36px;font-family:'Arial Rounded MT';">WITRobPose</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size: 22px">Hubei Provincial Key Laboratory of Intelligent Robot</div><br />
+        <div style="font-size:22px;">Industrial robot attitude data set</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div style="font-size:20px;">Research Center of Industrial Robot Engineering Technology</div>
+    </div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="image/校徽.jpg" height="84px" style=" position: absolute;
+            top: 0; background:ActiveBordert;" />
+    <br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <div id="navlist">
+        <ul style="position:center;">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="detailed description.html">details</a></li>
+            <li><a href="About us.html">About us</a></li>
+            <li><a href="首页.html">中文</a></li>
+        </ul>
+    </div><br /><br /><br /><br />&nbsp;
+    <div class="explore">
+        <div style="font-family:Bahnschrift">Introduction to datasets：</div>
+        <div>
+            <br />
+            ①Annotation method:<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            Annotation method: we put the preprocessed pictures in the IMG folder, and then annotate one by one with dot code, and then dot the running pictures. Since our data sets are all six axis industrial robots, we mark each joint point (i.e., six joint points), and then run the connection code to connect to get the final labeled picture. If the line is outside the robot, adjust the position of the point until the robot's attitude can be displayed.<br />
+            ②How to use:<br /><br />
+            1.If there is video data, put the photo and video (through video_cut.py, the video file is placed in the same directory, the file name is changed to test.mp4, and the suffix in the code is changed if the suffix is different), select the appropriate frame parameters to intercept the video, and manually select the appropriate samples to store in the image for the difference sample elimination.<br /><br />
+            2.Arrange the images in the images folder, and then save the generated image folder of a video into the IMG folder by resize_img.py. If you need to continue adding videos, you need to set the img_new_name parameter to continue adding images later. Otherwise, the script above will overwrite the previous images.<br /><br />
+            3.  If the image data is collected directly, put the image directly into the IMG folder, and then carry out the following operations.<br /><br />
+            4. Click mouse_callback.py for img folder, and draw_line.py line to save it into ANN folder.<br /><br />
+            5. Convert txt2json.py to JSON file, and check.py for JSON format detection. If an error is reported, check the online JSON file format on the official website of bejson to find the error and correct it. Generally, there is one and more comma problems.<br /><br />
+            Note: if the script has absolute path changed to relative path, the path will not report an error.<br /><br /><br /><br />
+            <div style="font-family:'Agency FB';display:block;font-size:30px;text-align:center;color:red;">If you need the data, download it !</div>
+        </div>
+    </div>
+    <body style="background-image: url(image/纯色1.jpg); background-repeat:no-repeat  ">
+    </body>
+</body>
+</html>
